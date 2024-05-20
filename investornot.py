@@ -5,11 +5,11 @@ import numpy as np
 st.title('Hey! New investment? :wave:')
 
 DATE_COLUMN = 'date'
-DATA_URL = ('file:///Users/hannaabdulmajeed/Downloads/AAPL.csv')
+DATA = (st.file_uploader("Choose a CSV file", type="csv"))
 VOLUME_COLUMN = 'volume'
 
 def load_data(nrows):
-    data = pd.read_csv(DATA_URL, nrows=nrows)
+    data = pd.read_csv(DATA, nrows=nrows)
     lowercase = lambda x: str(x).lower()
     data.rename(lowercase, axis='columns', inplace=True)
     data[DATE_COLUMN] = pd.to_datetime(data[DATE_COLUMN])
