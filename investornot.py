@@ -5,7 +5,7 @@ import numpy as np
 st.title('Hey! New investment? :wave:')
 
 DATE_COLUMN = 'date'
-DATA_URL = ('https://finance.yahoo.com/quote/AAPL/history')
+DATA_URL = ('file:///Users/hannaabdulmajeed/Downloads/AAPL.csv')
 VOLUME_COLUMN = 'volume'
 
 def load_data(nrows):
